@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/roboto-v20-latin-regular.eot');
+    src: local('Roboto'), local('Roboto-Regular'),
+         url('../fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'),
+         url('../fonts/roboto-v20-latin-regular.woff') format('woff'),
+         url('../fonts/roboto-v20-latin-regular.ttf') format('truetype'),
+         url('../fonts/roboto-v20-latin-regular.svg#Roboto') format('svg');
+}  
+
+html {
+    font-family: 'Roboto';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 60pt;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 背景 */
+
+.container {
+    position: fixed;
+    background: rgb(26,26,27);
+    background: linear-gradient(0deg, rgba(26,26,27,1) 0%, rgba(35,104,183,1) 100%);
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+/* header區域 */
+
+div.header_container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 搜尋bar */
+
+.searchBar{
+    position: relative;
+    margin: 5px 50px;
+}
+  
+.searchBar input#search{
+    width: 200px;
+    height: 30px;
+    background: white;
+    border: none;
+    float: left;
+    color: #707070;
+    padding-left: 45px;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: bold;
+    font-style: italic;
+}
+  
+.searchBar input:focus::placeholder {
+    color: transparent;
+}
+
+.searchBar input#search:focus {
+    text-align: left;
+}
+
+.searchBar .icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 20px;
+    z-index: 0;
+    color: #707070;
+}
+
+.searchBar input#search:hover, .searchBar input#search:focus, .searchBar input#search:active{
+    outline: none;
+    box-shadow: 0 0 0 0.2rem black;
+    transition: box-shadow .5s ease;
+}
+
+/* 登入登出 */
+
+div.member {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+div.member:after {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background: white;
+}
+
+div.member:hover:after {
+    animation-name: member_hover;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes member_hover {
+    0% {
+        width: 0;
+        background: transparent;
+    }
+
+    100% {
+        width: 100%;
+        background: #E2E832;
+    }
+}
+
+span.member {
+    color: white;
+    font-size: 15pt;
+}
+
+/* nav區域 */
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    margin-top: 10px;
+}
+
+/* logo */
+
+div.logo {
+    width: 20%;
+    margin-left: 50px;
+}
+
+div.logo:hover #logo {
+    transform: scale(1.04);
+}
+
+#logo {
+    max-width: 200px;
+}
+
+/* navbar */
+
+ul.navBar {
+    display: flex;
+    width: 80%;
+}
+
+li.li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 150px;
+    margin: 0 15px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+li.li:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: white;
+    transition: width .3s ease, background-color .3s ease;
+}
+
+li.li:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: white;
+    transition: width .3s ease, background-color .3s ease;
+}
+
+li.li:hover:before , li.li:hover:after {
+    animation-name: li_hover;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes li_hover {
+    0%{
+        height: 0%;
+        background: transparent;    
+    }
+
+    100%{
+        height: 100%;
+        background: #E2E832;    
+    }
+}
+
+ul > li:nth-last-child(1) {
+    margin-right: 50px;
+}
+
+li.li > a {
+    text-align: center;
+    font-size: 15pt;
+    color: white;
+}
+
+/* RWD */
+
+@media (max-width: 1199px) {
+
+    div.logo {
+        margin-left: 25px;
+    }
+
+    li.li {
+        flex: 1 0 100px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    li.li {
+        flex: 1 0 80px;
+    }
+
+}

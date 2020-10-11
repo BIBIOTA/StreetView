@@ -1,0 +1,144 @@
+footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+/* 社群連結 */
+
+div.social {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+div.social > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 30px;
+    border: 4px solid #333333;
+    background-color: white;
+    border-radius: 100px;
+    position: relative;
+}
+
+div.social > span:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 0%;
+    border-radius: 100px;
+    background: transparent;
+    transition: height .3s, width .3s;
+    z-index: 0;
+}
+
+div.social > span:hover:before {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(100,153,253,1) 0%, rgba(7,95,255,1) 50%, rgba(100,153,253,1) 100%);
+}
+
+div.social > span > a > img {
+    position: relative;
+    z-index: 2;
+}
+
+/* 網站公司 */
+
+div.company {
+    width: 20%;
+    font-size: 15pt;
+    text-align: center;
+    color: white;
+}
+
+/* 聯絡我們 */
+
+div.contact {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.contact > span {
+    margin: 0 30px;
+}
+
+span.contact_words > a {
+    font-size: 15pt;
+    text-decoration: none;
+    color: white;
+}
+
+span.contact_words:hover ~ span.contact_img img {
+    animation-name: rotate;
+    animation-duration: 1s;
+}
+
+span.contact_img:hover img{
+    animation-name: rotate;
+    animation-duration: 1s;
+}
+  
+@keyframes rotate {
+
+    0% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(25deg);
+    }
+
+    50% {
+        transform: rotate(0);
+    }
+
+    75% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+
+}
+
+/* RWD */
+
+@media (max-width: 991px) {
+
+    div.social {
+        width: 35%;
+    }
+
+    div.company {
+        width: 25%;
+    }
+
+    div.contact {
+        width: 35%;
+    }
+
+    div.social > span {
+        margin: 0 20px;
+    }
+
+    div.social > span:nth-child(1) {
+        margin-left: 50px;
+    }
+
+}
