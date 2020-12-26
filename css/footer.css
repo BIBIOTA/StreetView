@@ -1,144 +1,276 @@
-footer {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    width: 100%;
+.footer{
+  margin-top: 250px;
+  background: rgb(100,153,253);
+  background: linear-gradient(0deg, rgba(100,153,253,1) 0%, rgba(7,95,255,1) 50%, rgba(100,153,253,1) 100%);  width: 100%;
+  height: 100px;
+  display: flex;
 }
 
-footer img {
-    width: 40px;
-    height: 40px;
+div.inside_bar {
+  width: 90%;
+  height: 80px;
+  margin: auto;
+  background-color: #007D64;
+  display: flex;
 }
-
-/* 社群連結 */
 
 div.social {
-    width: 40%;
-    display: flex;
-    justify-content: center;
+  width: 280px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #007D64;
 }
 
-div.social > span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    margin: 0 30px;
-    border: 4px solid #333333;
-    background-color: white;
-    border-radius: 100px;
-    position: relative;
+div.social > a {
+  margin: auto;
+  display: flex;
 }
 
-div.social > span:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 50%;
-    height: 0%;
-    border-radius: 100px;
-    background: transparent;
-    transition: height .3s, width .3s;
-    z-index: 0;
+div.social > a > img {
+  width: 60px;
+  height: 60px;
 }
 
-div.social > span:hover:before {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, rgba(100,153,253,1) 0%, rgba(7,95,255,1) 50%, rgba(100,153,253,1) 100%);
+div.fb {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/fb.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
 }
 
-div.social > span > a > img {
-    position: relative;
-    z-index: 2;
+div.fb {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/fb.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
 }
 
-/* 網站公司 */
+div.fb:hover {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/fb_hover.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.ig {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/ig.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.ig:hover {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/ig_hover.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+
+div.tt {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/tt.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.tt:hover {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/tt_hover.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+
 
 div.company {
-    width: 20%;
-    font-size: 15pt;
-    text-align: center;
-    color: white;
+  width: 640px;
+  display: flex;
+  justify-content: center;
 }
 
-/* 聯絡我們 */
+div.company img {
+  width: 60px;
+  height: 50px;
+  margin: auto;
+}
+
+span.footer_text {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
 
 div.contact {
-    width: 40%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-div.contact > span {
-    margin: 0 30px;
+div.contact span.footer_text {
+  font-size: 30px;
 }
 
-span.contact_words > a {
-    font-size: 15pt;
-    text-decoration: none;
-    color: white;
+div.contact span.footer_text a {
+  text-decoration: none;
+  color: white;
 }
 
-span.contact_words:hover ~ span.contact_img img {
-    animation-name: rotate;
-    animation-duration: 1s;
+div.contact > a {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-span.contact_img:hover img{
-    animation-name: rotate;
-    animation-duration: 1s;
+div.contact:hover img{
+  animation-name: rotate;
+  animation-duration: 1s;
 }
-  
+
 @keyframes rotate {
-
-    0% {
-        transform: rotate(0);
-    }
-
-    25% {
-        transform: rotate(25deg);
-    }
-
-    50% {
-        transform: rotate(0);
-    }
-
-    75% {
-        transform: rotate(25deg);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
-
+  00% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 
-/* RWD */
+div.contact > a > img{
+  width: 60px;
+  height: 60px;
+}
 
-@media (max-width: 991px) {
+@media (min-width: 1200px) {
+  div.company {
+    width: 40%;
+  }
 
-    div.social {
-        width: 35%;
-    }
+  div.social {
+    width: 30%;
+  }
 
-    div.company {
-        width: 25%;
-    }
+  div.contact {
+    width: 30%;
+  }
 
-    div.contact {
-        width: 35%;
-    }
+  div.company > span {
+    font-size: 25pt;
+  }
+}
 
-    div.social > span {
-        margin: 0 20px;
-    }
+@media (max-width:1199px) {
+  div.social > a > div {
+    width: 40px;
+    height: 40px;
+    margin: auto 10px;
+  }
+  div.social > a >div:hover {
+    width: 40px;
+    height: 40px;
+  }
+  div.company > span {
+    font-size: 20pt;
+    text-align: center;
+  }
+  div.company img {
+    width: 40px;
+    height: 30px;
+    margin: auto;
+  }
+  div.contact {
+    width: 30%;
+    display: flex;
+    margin: auto;
+  }
+  div.contact span.footer_text {
+    font-size: 25pt;
+  }
+  div.contact > a > img{
+    width: 40px;
+    height: 40px;
+  }
+}
 
-    div.social > span:nth-child(1) {
-        margin-left: 50px;
-    }
+@media (max-width:767px) {
+  .footer {
+    margin-top: 150px;
+  }
+  div.inside_bar {
+    width: 100%;
+  }
 
+  div.social {
+    width: 30%;
+  }
+
+  div.social > a > div {
+    width: 30px;
+    height: 30px;
+  }
+
+  div.social > a >div:hover {
+    width: 30px;
+    height: 30px;
+  }
+
+  div.company {
+    width: 40%
+  }
+
+  div.company > span {
+    font-size: 20pt;
+    text-align: center;
+  }
+
+  div.company img {
+    display: none;
+  }
+
+  div.contact {
+    width: 30%;
+    display: flex;
+  }
+
+  div.contact span.footer_text {
+    display: none;
+  }
+
+  div.contact > a > img{
+    width: 40px;
+    height: 40px;
+  }
+
+  div.social > a > div {
+    margin: 0 2px;
+  }
+}
+
+@media (max-width:575px) {
+  .footer {
+    margin-top: 100px;
+  }
 }

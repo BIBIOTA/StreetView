@@ -1,0 +1,544 @@
+main.map {
+  position: relative;
+}
+
+div.leftbutton , div.rightbutton{
+  display: none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.drag-box {
+width: 100%;
+overflow: hidden;
+/* cursor: grab; */
+}
+
+.grab {
+  cursor: grab;
+}
+
+.grab:active {
+  cursor: grabbing;
+}
+
+div.map_img {
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+div.map_img img{
+  width: 100%;
+  position: relative;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+div.area_button > button > div.areabtn {
+  width: 200px;
+  height: 70px;
+  background-color: #007D64;
+  font-size: 35px;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  border-radius: 90px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.area_button > button {
+  cursor: pointer;
+}
+
+div.area_button > button > div:hover {
+  background: rgb(100,153,253);
+  background: linear-gradient(0deg, rgba(100,153,253,1) 0%, rgba(7,95,255,1) 50%, rgba(100,153,253,1) 100%);
+  animation-name: gogo;
+  animation-duration: 1s;
+}
+
+@keyframes gogo {
+  00% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+div.inbtn {
+  width: 300px;
+  height: 70px;
+  position: absolute;
+  display: none;
+  background-color: #007D64;
+  font-size: 30pt;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  border-radius: 90px;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  }
+
+  div.inbtn a {
+    color: white;
+    text-decoration: none;
+  }
+
+div.europe {
+  position: absolute;
+  left: 25%;
+  top: 20%;
+}
+
+div.america {
+  position: absolute;
+  left: 4%;
+  top: 48%;
+}
+
+div.africa {
+  position: absolute;
+  left: 55%;
+  top: 55%;
+}
+
+div.antarctica {
+  position: absolute;
+  left: 42%;
+  top: 83%;
+}
+
+div.asia {
+  position: absolute;
+  left: 80%;
+  top: 35%;
+}
+
+div.oceania {
+  position: absolute;
+  left: 80%;
+  top: 70%;
+}
+
+div.penguin {
+  position: absolute;
+  left:70%;
+  bottom: -170px;
+  transform: translateX(-70%);
+}
+
+div.noname {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #EAEAE6;
+  z-index: 1;
+}
+
+div.penguin img {
+  max-width: 200px;
+  transition: transform 2s;
+}
+
+.penguinhover {
+  transform: translateY(-100px);
+  transition: transform 2s;
+}
+
+div.sydney_b {
+  left: 2000px;
+  top: 850px;
+}
+
+div.taipei_b {
+  left: 1950px;
+  top: 500px;
+}
+
+div.tokyo_b {
+  left: 2100px;
+  top: 380px;
+}
+
+div.seoul_b {
+  left: 1700px;
+  top: 350px;
+}
+
+div.cairo_b {
+  left: 1250px;
+  top: 480px;
+}
+
+div.vanice_b {
+  left: 1150px;
+  top: 300px;
+}
+
+div.london_b {
+  left: 800px;
+  top: 340px;
+}
+
+div.newyork_b {
+  top: 400px;
+  left: 400px;
+}
+
+div.antarctica_b {
+  top: 1000px;
+  left: 1100px;
+}
+
+div.penguin_in {
+  width: 200px;
+  display: none;
+  justify-content: center;
+  position: absolute;
+  top: 900px;
+  left: 1400px;
+}
+
+div.penguin_in img {
+  max-width: 100%;
+  flex-shrink: 1;
+}
+
+div.backbutton {
+  display: none;
+  justify-content: center;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  background-color: #007d64;
+  left: 20px;
+  bottom: 20px;
+  z-index: 5;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+div.backbutton:hover {
+  background: rgb(100,153,253);
+  background: linear-gradient(0deg, rgba(100,153,253,1) 0%, rgba(7,95,255,1) 50%, rgba(100,153,253,1) 100%);
+}
+
+div.backbutton img {
+  max-width: 70%;
+}
+
+@media (max-width: 1399px) {
+  div.area_button > button > div.areabuttonbtn {
+    width: 150px;
+    height: 70px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1199px) {
+  div.area_button > button > div.areabtn {
+    width: 120px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  div.area_button > button > div {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  div.map_img {
+  width: 100%;
+  }
+
+  img#world_map {
+  width: 100%;
+  }
+
+  div.europe {
+    position: absolute;
+    left: 210px;
+    top: 80px;
+  }
+
+  div.america {
+    position: absolute;
+    left: 40px;
+    top: 180px;
+  }
+
+  div.africa {
+    position: absolute;
+    left: 430px;
+    top: 190px;
+  }
+
+  div.antarctica {
+    position: absolute;
+    left: 340px;
+    top: 300px;
+  }
+
+  div.asia {
+    position: absolute;
+    left: 630px;
+    top: 120px;
+  }
+
+  div.oceania {
+    position: absolute;
+    left: 1050px;
+    top: 430px;
+  }
+}
+
+@media (max-width: 1199px) {
+  div.penguin {
+    bottom: auto;
+    left: 65%;
+  }
+  div.penguin img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 991px) {
+  div.penguin img {
+    max-width: 100px;
+  }
+  .penguinhover {
+    transform: translateY(-70px);
+    transition: transform 2s;
+  }
+}
+
+@media (max-width: 767px) {
+  div.road_left {
+    display: none
+  }
+
+  div.road_right{
+    display: none;
+  }
+
+  div.road_center {
+    width: 100%;
+  }
+
+  .container-1 {
+    margin: 10px;
+  }
+
+  .container-1 input#search{
+    width: 400px;
+    font-size: 15pt;
+  }
+
+  button#go {
+    border-radius: 20px;
+    margin: 0;
+  }
+
+  div.circle {
+    z-index: 1;
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+    background-color: #007d64;
+  }
+
+  button#go:hover > div.circle {
+    width: 60px;
+    height: 50px;
+    border-radius: 20px;
+  }
+  .drag-box {
+    width: 100%;
+    overflow: auto;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .drag-box::-webkit-scrollbar {
+  display: none;
+  }
+
+  .drag-box:active {
+    cursor: grabbing;
+  }
+
+  div.map_img {
+    width: 1200px;
+  }
+
+  main.map {
+    position: relative;
+  }
+
+  div.area_button {
+    position: absolute;
+    top: 0;
+  }
+
+  div.leftbutton , div.rightbutton{
+    position: absolute;
+    bottom: 40%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  div.leftbutton , div.rightbutton i{
+    color: white;
+  }
+
+  div.leftbutton {
+    left: 10%;
+  }
+
+  div.rightbutton {
+    right: 10%;
+  }
+
+  div.area_button > button > div {
+    width: 150px;
+    height: 30px;
+  }
+
+  div.area_button > button > div > a {
+    text-decoration: none;
+    color: white;
+  }
+
+  div.europe {
+    display: none !important;
+  }
+
+  div.america {
+    display: none !important;
+  }
+
+  div.africa {
+    display: none !important;
+  }
+
+  div.antarctica {
+    display: none !important;
+  }
+
+  div.asia {
+    display: none !important;
+  }
+
+  div.oceania {
+    display: none !important;
+  }
+
+  div.newyork_b {
+    display: flex !important;
+    position: absolute;
+    left: 200px;
+    top: 130px;
+  }
+
+  div.vanice_b {
+    display: flex !important;
+    position: absolute;
+    left: 500px;
+    top: 130px;
+  }
+
+  div.london_b {
+    display: flex !important;
+    position: absolute;
+    left: 350px;
+    top: 100px;
+    }
+
+  div.cairo_b {
+    display: flex !important;
+    position: absolute;
+    left: 500px;
+    top: 200px;
+  }
+
+  div.antarctica_b {
+    display: flex !important;
+    position: absolute;
+    left: 500px;
+    top: 470px;
+  }
+
+  div.penguin_in {
+    width: 100px;
+    display: flex !important;
+    justify-content: center;
+    position: absolute;
+    left: 650px;
+    top: 430px;
+  }
+
+  div.penguin_in img {
+    max-width: 100%;
+    flex-shrink: 1;
+  }
+
+  div.sydney_b {
+    display: flex !important;
+    position: absolute;
+    left: 1050px;
+    top: 400px;
+  }
+
+  div.taipei_b {
+    display: flex !important;
+    position: absolute;
+    left: 950px;
+    top: 200px;
+  }
+
+  div.tokyo_b {
+    display: flex !important;
+    position: absolute;
+    left: 1000px;
+    top: 160px;
+  }
+
+  div.seoul_b {
+    display: flex !important;
+    position: absolute;
+    left: 790px;
+    top: 160px;
+  }
+}

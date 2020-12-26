@@ -1,0 +1,230 @@
+.footer{
+  margin-top: 250px;
+  background: rgb(100,153,253);
+  background: linear-gradient(0deg, rgba(100,153,253,1) 0%, rgba(7,95,255,1) 50%, rgba(100,153,253,1) 100%);  width: 100%;
+  height: 100px;
+  display: flex;
+}
+
+div.inside_bar {
+  width: 90%;
+  height: 80px;
+  margin: auto;
+  background-color: #007D64;
+  display: flex;
+}
+
+div.social {
+  width: 280px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #007D64;
+}
+
+div.social > a {
+  margin: auto;
+  display: flex;
+}
+
+div.social > a > img {
+  width: 60px;
+  height: 60px;
+}
+
+div.fb {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/fb.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.fb {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/fb.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.fb:hover {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/fb_hover.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.ig {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/ig.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.ig:hover {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/ig_hover.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+
+div.tt {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/tt.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+div.tt:hover {
+  width: 60px;
+  height: 60px;
+  background-image: url(../image/tt_hover.png);
+  background-repeat: no-no-repeat;
+  background-size: cover;
+}
+
+
+
+div.company {
+  width: 640px;
+  display: flex;
+  justify-content: center;
+}
+
+div.company img {
+  width: 60px;
+  height: 50px;
+  margin: auto;
+}
+
+span.footer_text {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+div.contact {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+div.contact span.footer_text {
+  font-size: 30px;
+}
+
+div.contact span.footer_text a {
+  text-decoration: none;
+  color: white;
+}
+
+div.contact > a {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.contact:hover img{
+  animation-name: rotate;
+  animation-duration: 1s;
+}
+
+@keyframes rotate {
+  00% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(25deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+div.contact > a > img{
+  width: 60px;
+  height: 60px;
+}
+
+@media (max-width:1199px) and (min-width:768px) {
+  div.social > a > div {
+    width: 40px;
+    height: 40px;
+    margin: auto 10px;
+  }
+  div.social > a >div:hover {
+    width: 40px;
+    height: 40px;
+  }
+  div.company > span {
+    font-size: 20pt;
+    text-align: center;
+  }
+  div.company img {
+    width: 40px;
+    height: 30px;
+    margin: auto;
+  }
+  div.contact {
+    width: 30%;
+    display: flex;
+    margin: auto;
+  }
+  div.contact span.footer_text {
+    font-size: 25pt;
+  }
+  div.contact > a > img{
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width:767px) {
+  div.inside_bar {
+    width: 100%;
+  }
+  div.social > a > div {
+    width: 30px;
+    height: 30px;
+  }
+  div.social > a >div:hover {
+    width: 30px;
+    height: 30px;
+  }
+  div.company > span {
+    font-size: 25pt;
+    text-align: center;
+  }
+  div.company img {
+    display: none;
+  }
+  div.contact {
+    width: 30%;
+    display: flex;
+  }
+  div.contact span.footer_text {
+    display: none;
+  }
+  div.contact > a > img{
+    width: 40px;
+    height: 40px;
+  }
+}

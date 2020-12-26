@@ -1,0 +1,314 @@
+@import "./hamburgers.css";
+
+header.header {
+  max-width: 100%;
+  height: 100px;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(100,153,253);
+  background: linear-gradient(0deg, rgba(100,153,253,1) 0%, rgba(7,95,255,1) 50%, rgba(100,153,253,1) 100%);
+  position: relative;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+nav {
+  width: 80%;
+  display: flex;
+}
+
+div.logo {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+
+div.pic {
+  width: 280px;
+  height: 92px;
+  margin: 4px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+div.pic:hover {
+  transform: scale(1.04);
+}
+
+ul.navbar {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: auto;
+}
+
+ul.navbar > li{
+  background-color: #007D64;
+  width: 200px;
+  height: 80px;
+  border: 2px solid white;
+  margin: 10px 10px;
+  color: white;
+  font-size: 20pt;
+  font-weight: bold;
+  line-height: 35px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+ul.navbar > li:hover{
+  background-color: #0267d3;
+}
+
+ul.navbar > li:hover > a > div.nav_img img {
+  animation-name: godown;
+  animation-duration: 1s;
+}
+
+@keyframes godown {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+ul.navbar > li a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+ul.navbar img{
+  padding: 0 80px;
+}
+
+div.member {
+  width: 10%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+div.heart + div.account {
+  margin: 0 50px;
+}
+
+div.heart {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+div.heartpic {
+  width: 40px;
+  height: 40px;
+  background-image: url(../image/logo_circle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.heartpic:hover {
+  width: 40px;
+  height: 40px;
+  background-image: url(../image/logo_circle_hover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.account {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+div.account:hover > div.loginbox {
+  display: flex;
+}
+
+div.loginbox {
+  position: absolute;
+  bottom: -130px;
+  right: 50%;
+  width: 300px;
+  height: 100px;
+  transform: translateX(15%);
+  background-color: white;
+  border-radius: 30px;
+  display: none;
+  padding: 0 25px;
+  z-index: 1;
+}
+
+div.login, div.signin {
+  background-color: #007d64;
+  width: 120px;
+  height: 50px;
+  margin: auto;
+  border-radius: 20px;
+}
+
+div.loginbox a {
+  text-decoration: none;
+}
+
+div.loginbox:hover ~ a > div.accountpic {
+  background-image: url(../image/person_circle_hover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.login:hover, div.signin:hover {
+  background-color: #0267d3;
+}
+
+div.login, div.signin h3 {
+  line-height: 50px;
+}
+
+div.sanziao {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(160%);
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid white;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+
+div.accountpic {
+  width: 40px;
+  height: 40px;
+  background-image: url(../image/person_circle.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.accountpic:hover {
+  width: 40px;
+  height: 40px;
+  background-image: url(../image/person_circle_hover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hamburger {
+  display: none;
+}
+
+h1 {
+  font-size: 60pt;
+  text-align: center;
+}
+
+@media (max-width:1920px) and (min-width: 768px) {
+  nav {
+    display: flex !important;
+  }
+}
+
+@media (max-width:1399px) {
+  ul.navbar {
+    width: 70%;
+  }
+  ul.navbar > li {
+    width: 150px;
+    font-size: 15pt;
+  }
+}
+
+@media (max-width:1199px) and (min-width: 768px) {
+  div.logo img {
+    width: 190px;
+  }
+  ul.navbar > li {
+    align-items: center;
+  }
+  div.nav_img {
+    display: none;
+  }
+  div.member {
+    width: 15%;
+  }
+  div.heart + div.account {
+    margin: 0 25px;
+  }
+}
+
+@media (max-width:767px) {
+  nav {
+    position: absolute;
+    top: 0;
+    display: none;
+    height: 450px;
+    z-index: 1;
+    width: 100%;
+  }
+  div.logo img {
+    width: 190px;
+  }
+  ul.navbar {
+    width: 100%;
+    transform: translateY(100px);
+    display: block;
+    background-color: #EAEAE6;
+  }
+  ul.navbar > li {
+    width: 100%;
+  }
+
+  ul.navbar > li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div.nav_img {
+    display: none;
+  }
+
+  div.member {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  div.heart {
+    margin: 0;
+  }
+
+  div.account {
+    margin: 0;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 2;
+  }
+}

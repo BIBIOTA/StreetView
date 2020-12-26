@@ -1,133 +1,590 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>STREET VIEW</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="icon" href="./logo.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-  </head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>STREET VIEW</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
 <body>
-<!-- 背景 -->
-    <div class="container"></div> 
-<!-- header區域 -->
-    <header>
+  <!-- header -->
+  <header class="header">
+    <div class="logo">
+      <a href="./index.html">
+        <div class="pic">
+          <img src="./image/logo.svg">
+        </div>
+      </a>
+    </div>
+    <nav>
+      <ul class="navbar">
+        <li class="nav-1">
+          <a href="./area.html">
+            <div class="nav_name">
+              City
+            </div>
+            <div class="nav_img">
+              <img src="./image/nav_arrow.png">
+            </div>
+          </a>
+        </li>
+          <li class="nav-2">
+            <div class="nav_name" id="freetext">
+              Free to Travel
+            </div>
+            <div class="nav_img" id="nav_img">
+              <img src="./image/nav_arrow.png" id="arrow">
+            </div>
+          </li>
 
-        <div class="header_container">
+        <li class="nav-3">
+          <a href="./about.html">
+            <div class="nav_name">
+              About
+            </div>
+            <div class="nav_img">
+              <img src="./image/nav_arrow.png">
+            </div>
+          </a>
+        </li>
+        <li class="nav-4">
+          <a href="upload.html">
+            <div class="nav_name">
+              Upload Video
+            </div>
+            <div class="nav_img">
+              <img src="./image/nav_arrow.png">
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="member member_in">
+        <div class="heart">
+          <a href="./myfavorite.html">
+            <div class="heartpic"></div>
+          </a>
+        </div>
+        <div class="mobile_account">
+          <div class="login">
+            <a href="login.html">
+              <h3>Login</h3>
+            </a>
+          </div>
+          <div class="signin">
+            <a href="signin.html">
+              <h3>Sign Up</h3>
+            </a>
+          </div>
+        </div>
+        <div class="account">
+          <div class="loginbox">
+            <div class="login">
+              <a href="login.html">
+                <h3>Login</h3>
+              </a>
+            </div>
+            <div class="signin">
+              <a href="signin.html">
+                <h3>Sign Up</h3>
+              </a>
+            </div>
+            <div class="sanziao"></div>
+          </div>
+          <div class="accountpic"></div>
+        </div>
+      </div>
+    </nav>
 
-            <div class="searchBar">
+    <div class="member member_r">
+
+      <div class="login">
+        <a href="login.html">
+          <h3>Login</h3>
+        </a>
+      </div>
+
+      <div class="signin">
+        <a href="signin.html">
+          <h3>Sign Up</h3>
+        </a>
+      </div>
+
+      <div class="heart">
+        <a href="myfavorite.html">
+          <div class="heartpic"></div>
+        </a>
+      </div>
+
+    </div>
+
+    <button class="hamburger hamburger--spin-r type="button"">
+      <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+  </header>
+  <!-- map -->
+  <main class="map">
+    <div class="road">
+      <div class="road_left">
+        <div class="road_left_top"></div>
+        <div class="road_left_bottom"></div>
+      </div>
+      <div class="road_center">
+        <form class="search" action="index.html" method="post" onsubmit="return false">
+          <div class="box">
+            <div class="container-1">
                 <span class="icon"><i class="fas fa-search"></i></span>
-                <input type="text" id="search" placeholder="Search City" />
+                <input type="text" id="search" placeholder="Find Your Favorite City View !" />
             </div>
-
-            <div class="login member">
-                <a href="./login.html">
-                    <span class="login member">Login</span>
-                </a>
+            <button type="button" name="button" id="go">
+              <div class="circle"></div>
+              <h3>
+                Go
+              </h3>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="road_right">
+        <div class="road_right_top"></div>
+        <div class="road_right_bottom"></div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="map_img drag" id="mapbox">
+        <img src="./image/world_map.png" alt="world_map" id="world_map">
+        <div class="area_button">
+          <button>
+            <div class="sydney_b inbtn">
+              <a href="./sydney.html">
+                Sydney
+              </a>
             </div>
-
-            <div class="signUp member">
-                <a href="./signup.html">
-                    <span class="signUp member">Sign Up</span>
-                </a>
+          </button>
+          <button>
+            <div class="taipei_b inbtn">
+              <a href="./taipei.html">
+                Taipei
+              </a>
             </div>
-
+          </button>
+          <button>
+            <div class="tokyo_b inbtn">
+              <a href="./tokyo.html">
+                Tokyo
+              </a>
+            </div>
+          </button>
+          <button>
+            <div class="seoul_b inbtn">
+              <a href="./seoul.html">
+                Seoul
+              </a>
+            </div>
+          </button>
+          <button>
+            <div class="cairo_b inbtn">
+              <a href="./cairo.html">
+                Cairo
+              </a>
+            </div>
+          </button>
+          <button>
+            <div class="vanice_b inbtn">
+              <a href="./vanice.html">
+                Vanice
+              </a>
+            </div>
+          </button>
+          <button>
+            <div class="london_b inbtn">
+              <a href="./london.html">
+                Lodon
+              </a>
+            </div>
+          </button>
+          <button>
+            <div class="newyork_b inbtn">
+              <a href="./newYork.html">
+                New York
+              </a>
+            </div>
+          </button>
+          <button>
+            <div class="antarctica_b inbtn">
+              <a href="./antarctica.html">
+                South Pole
+              </a>
+            </div>
+          </button>
+          <div class="penguin_in">
+            <img src="./image/penguin.png" id="hihi_penguin">
+          </div>
+          <button>
+            <div class="europe areabtn" onmouseover="europe(this)" onmouseout="normal(this)" id="europezoom">
+              Europe
+            </div>
+          </button>
+          <button>
+            <div class="america areabtn" onmouseover="america(this)" onmouseout="normal(this)" id="americazoom">
+              America
+            </div>
+          </button>
+          <button>
+            <div class="africa areabtn" onmouseover="africa(this)" onmouseout="normal(this)" id="africazoom">
+              Africa
+            </div>
+          </button>
+          <button>
+            <div class="antarctica areabtn" onmouseover="antarctica(this)" onmouseout="normal(this)" id="antzoom">
+              Antarctica
+            </div>
+          </button>
+          <button>
+            <div class="asia areabtn" onmouseover="asia(this)" onmouseout="normal(this)" id="asiazoom">
+              Asia
+            </div>
+          </button>
+          <button>
+            <div class="oceania areabtn" onmouseover="oceania(this)" onmouseout="normal(this)" id="oceaniazoom">
+              Oceania
+            </div>
+          </button>
         </div>
-
-        <nav>
-
-            <div class="logo">
-                <a href="./index.html">
-                    <img src="./image/logo.svg" id="logo">
-                </a>
-                </div>
-
-            <ul class="navBar">
-
-                <li class="li nav_1">
-                    <a href="./list.html">
-                       City List
-                   </a>
-                </li>
-
-                
-                <li class="li nav_2">
-                    <a href="./free.html">
-                        Go To<br>Anyway
-                    </a>
-                </li>
-
-                
-                <li class="li nav_3">
-                    <a href="./about.html">
-                        About
-                     </a>
-                </li>
-
-                
-                <li class="li nav_4">
-                    <a href="./upload.html">
-                         Upload<br>StreetView
-                    </a>
-                </li>
-
-                
-                <li class="li nav_5">
-                    <a href="./favorite.html">
-                       My Favorite
-                    </a>
-                </li>
-
-            </ul>
-
-            </nav>
-
-    </header>
-
-<!-- footer區域 -->
-
-    <footer>
-
-        <div class="social">
-            <span class="ig">
-                <a href="#">
-                  <img src="./image/ig.png">
-                 </a>
-            </span>
-            <span class="tt">
-                <a href="#">
-                    <img src="./image/tt.png">
-                </a>
-            </span>
-            <span class="fb">
-                <a href="#">
-                    <img src="./image/fb.png">
-                </a>
-            </span>
+      </div>
+      <div class="penguin">
+        <div class="noname"></div>
+        <img src="./image/penguin.png" id="penguin">
+      </div>
+    </div>
+    <div class="leftbutton" id="leftbutton"><i class="fas fa-angle-left"></i></div>
+    <div class="rightbutton" id="rightbutton"><i class="fas fa-angle-right"></i></div>
+    <div class="backbutton inbtn" id="backbutton"><img src="./image/back.png"></div>
+  </main>
+  <!-- city -->
+  <div class="city">
+    <div class="city_title">
+        <h1>Popular City View</h1>
+    </div>
+    <div class="road1">
+      <div class="road1_left">
+        <div class="road1_left_top"></div>
+        <div class="road1_left_bottom"></div>
+      </div>
+        <div class="road1_center">
+          <h2 class="cities_name">Taipei</h2>
         </div>
-
-        <div class="company">
-             STREET VIEW.INC
+      <div class="road1_right">
+        <div class="road1_right_top"></div>
+        <div class="road1_right_right">
+          <div class="road2"></div>
         </div>
+      </div>
+     </div>
 
-        <div class="contact">
-            <span class="contact_words">
-                <a href="./contact.html">
-                    Contact
-                </a>
-            </span>
-            <span class="contact_img">
-                <a href="#">
-                    <img src="./image/contact.png">
-                </a>
-            </span>
+
+    <div class="city_box">
+      <div class="city_image">
+        <div class="backgroundimage taipei"></div>
+        <div class="introduction">
+          <p>
+            Taipei is Taiwan's largest city. It is a modern cosmopolitan metropolis with a lively and diversified face.
+          </p>
         </div>
+      </div>
+      <div class="right_background">
+        <div class="right_top">
+          <div class="right_location">
+            25°03'75"N
+            <br>
+            121°56'46"E
+          </div>
+        </div>
+        <div class="right_middle">
+          <a href="./taipei.html">
+            <div class="flag">
+              <img src="./image/taiwan.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_middle_2">
+          <a href="./taipei.html">
+            <div class="golooking">
+              Go Looking
+            </div>
+            <div class="city_arrow">
+              <img src="./image/golooking.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_bottom"></div>
+      </div>
+    </div>
 
-    </footer>
+    <div class="road3">
+      <div class="road3_left_left">
+        <div class="road4"></div>
+      </div>
+      <div class="road3_left">
+        <div class="road3_left_top"></div>
+        <div class="road3_left_bottom"></div>
+      </div>
+      <div class="road3_right">
+        <h2 class="cities_name">Tokyo</h2>
+      </div>
+    </div>
 
+    <div class="city_box">
+      <div class="city_image">
+        <div class="backgroundimage tokyo"></div>
+        <div class="introduction">
+          <p>
+            Tokyo is the financial, political and commerce heart of Japan.
+            <br>
+            Is the world's most populous metropolitan area.
+          </p>
+        </div>
+      </div>
+      <div class="right_background">
+        <div class="right_top">
+          <div class="right_location">
+            35°65'28"N
+            <br>
+            139°83'95"E
+          </div>
+        </div>
+        <div class="right_middle">
+          <a href="./tokyo.html">
+            <div class="flag">
+              <img src="./image/japan.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_middle_2">
+          <a href="./tokyo.html">
+            <div class="golooking">
+              Go Looking
+            </div>
+            <div class="city_arrow">
+              <img src="./image/golooking.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_bottom"></div>
+      </div>
+    </div>
+
+    <div class="road5">
+      <div class="road5_left">
+        <h2 class="cities_name">Seoul</h2>
+      </div>
+      <div class="road5_right">
+        <div class="road5_right_top"></div>
+        <div class="road5_right_right">
+          <div class="road6"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city_box">
+      <div class="city_image">
+        <div class="backgroundimage seoul"></div>
+        <div class="introduction">
+          <p>
+            Seoul is the capital of South Korea. Fashion- and technology-forward but also deeply traditional, all to a nonstop K-Pop beat.
+          </p>
+        </div>
+      </div>
+      <div class="right_background">
+        <div class="right_top">
+          <div class="right_location">
+            37°53'26"N
+            <br>
+            127°02'46"E
+          </div>
+        </div>
+        <div class="right_middle">
+          <a href="./seoul.html">
+            <div class="flag">
+              <img src="./image/korea.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_middle_2">
+          <a href="./seoul.html">
+            <div class="golooking">
+              Go Looking
+            </div>
+            <div class="city_arrow">
+              <img src="./image/golooking.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_bottom"></div>
+      </div>
+    </div>
+
+    <div class="road7">
+      <div class="road7_left_left">
+        <div class="road8"></div>
+      </div>
+      <div class="road7_left">
+        <div class="road7_left_top"></div>
+      </div>
+      <div class="road7_right">
+        <h2 class="cities_name">London</h2>
+      </div>
+    </div>
+
+    <div class="city_box">
+      <div class="city_image">
+        <div class="backgroundimage london"></div>
+        <div class="introduction">
+          <p>
+            The capital of Great Britain.
+            <br>
+            One of the world's most visited cities.
+          </p>
+        </div>
+      </div>
+      <div class="right_background">
+        <div class="right_top">
+          <div class="right_location">
+            51°30′26"N
+            <br>
+            00°07′39"W
+          </div>
+        </div>
+        <div class="right_middle">
+          <a href="./london.html">
+            <div class="flag">
+              <img src="./image/british.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_middle_2">
+          <a href="./london.html">
+            <div class="golooking">
+              Go Looking
+            </div>
+            <div class="city_arrow">
+              <img src="./image/golooking.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_bottom"></div>
+      </div>
+    </div>
+
+    <div class="road9">
+      <div class="road9_left">
+        <h2 class="cities_name">Vanice</h2>
+      </div>
+      <div class="road9_right">
+        <div class="road9_right_top"></div>
+        <div class="road9_right_right">
+            <div class="road10"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city_box">
+      <div class="city_image">
+        <div class="backgroundimage vanice"></div>
+        <div class="introduction">
+          <p>
+            It was the greatest seaport in late medieval Europe and the continent’s commercial and cultural link to Asia.
+          </p>
+        </div>
+      </div>
+      <div class="right_background">
+        <div class="right_top">
+          <div class="right_location">
+            45°27'00"N
+            <br>
+            12°21'00"E
+          </div>
+        </div>
+        <div class="right_middle">
+          <a href="./vanice.html">
+            <div class="flag">
+              <img src="./image/italy.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_middle_2">
+          <a href="./vanice.html">
+            <div class="golooking">
+              Go Looking
+            </div>
+            <div class="city_arrow">
+              <img src="./image/golooking.png">
+            </div>
+          </a>
+        </div>
+        <div class="right_bottom"></div>
+      </div>
+    </div>
+
+    <div class="road11">
+      <div class="road11_top"></div>
+      <div class="road11_right"></div>
+    </div>
+
+    <div class="looking_more">
+      <a href="./area.html">
+        <div class="left_more">
+          <h2>
+            Looking More
+          </h2>
+        </div>
+      </a>
+    </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="inside_bar">
+      <div class="social">
+        <a href="#">
+          <div class="fb"></div>
+        </a>
+        <a href="#">
+          <div class="ig"></div>
+        </a>
+        <a href="#">
+          <div class="tt"></div>
+        </a>
+      </div>
+      <div class="company">
+        <img src="./image/footer_left_arrow.png">
+        <span class="footer_text">
+          STREET VIEW.INC
+        </span>
+        <img src="./image/footer_right_arrow.png">
+      </div>
+      <div class="contact">
+
+          <span class="footer_text">
+            <a href="./contact.html">
+              Contact
+            </a>
+          </span>
+
+        <a href="./contact.html">
+          <img src="./image/contact.png">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/jquery.dragscroll.min.js"></script>
+  <script src="./js/index.js" charset="utf-8"></script>
+  <script src="./js/header.js" type="module"></script>
+  <script src="./js/map.js"></script>
 </body>
 </html>

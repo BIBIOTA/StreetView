@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>City</title>
+  <link rel="stylesheet" href="./css/area.css">
+  <link href="./js/scroller/css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="./logo.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="logo">
+      <a href="./index.html">
+        <div class="pic">
+          <img src="./image/logo.svg">
+        </div>
+      </a>
+    </div>
+    <nav>
+      <ul class="navbar">
+        <li class="nav-1">
+          <a href="./area.html">
+            <div class="nav_name">
+              City
+            </div>
+            <div class="nav_img">
+              <img src="./image/nav_arrow.png">
+            </div>
+          </a>
+        </li>
+          <li class="nav-2">
+            <div class="nav_name" id="freetext">
+              Free to Travel
+            </div>
+            <div class="nav_img" id="nav_img">
+              <img src="./image/nav_arrow.png" id="arrow">
+            </div>
+          </li>
+
+        <li class="nav-3">
+          <a href="./about.html">
+            <div class="nav_name">
+              About
+            </div>
+            <div class="nav_img">
+              <img src="./image/nav_arrow.png">
+            </div>
+          </a>
+        </li>
+        <li class="nav-4">
+          <a href="upload.html">
+            <div class="nav_name">
+              Upload Video
+            </div>
+            <div class="nav_img">
+              <img src="./image/nav_arrow.png">
+            </div>
+          </a>
+        </li>
+      </ul>
+      <div class="member member_in">
+        <div class="heart">
+          <a href="./myfavorite.html">
+            <div class="heartpic"></div>
+          </a>
+        </div>
+        <div class="mobile_account">
+          <div class="login">
+            <a href="login.html">
+              <h3>Login</h3>
+            </a>
+          </div>
+          <div class="signin">
+            <a href="signin.html">
+              <h3>Sign Up</h3>
+            </a>
+          </div>
+        </div>
+        <div class="account">
+          <div class="loginbox">
+            <div class="login">
+              <a href="login.html">
+                <h3>Login</h3>
+              </a>
+            </div>
+            <div class="signin">
+              <a href="signin.html">
+                <h3>Sign Up</h3>
+              </a>
+            </div>
+            <div class="sanziao"></div>
+          </div>
+          <div class="accountpic"></div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="member member_r">
+
+      <div class="login">
+        <a href="login.html">
+          <h3>Login</h3>
+        </a>
+      </div>
+
+      <div class="signin">
+        <a href="signin.html">
+          <h3>Sign Up</h3>
+        </a>
+      </div>
+
+      <div class="heart">
+        <a href="myfavorite.html">
+          <div class="heartpic"></div>
+        </a>
+      </div>
+
+    </div>
+
+    <button class="hamburger hamburger--spin-r type="button"">
+      <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+  </header>
+  <!-- title -->
+  <div class="road">
+    <div class="road_left">
+      <div class="road_left_top"></div>
+      <div class="road_left_bottom"></div>
+    </div>
+    <div class="road_center">
+      <div class="breadcrumb">
+        <ol class="breadcrumb_list">
+          <li><a href="./index.html">
+            Homepage
+          </a>
+        </li>
+        </ol>
+      </div>
+      <h1>City</h1>
+    </div>
+    <div class="road_right">
+      <div class="road_right_top"></div>
+      <div class="road_right_bottom"></div>
+    </div>
+  </div>
+<!-- list -->
+  <main>
+    <!-- cities -->
+
+      <div class="city_list">
+        <div class="list">
+          <div class="top_title">
+            <h3>
+              Find Cities
+            </h3>
+          </div>
+          <div class="toggle content">
+            <form action="#" method="#">
+
+              <div class="bar bar1">
+                <input type="radio" name="city" value="1" checked id="radio1">
+                <label  for="radio1" class="city_name">city1</label>
+                <label class="location" for="radio1">continent1</label>
+              </div>
+
+              <div class="bar bar2">
+                <input type="radio" name="city" value="2"  id="radio2">
+                <label  for="radio2" class="city_name">city2</label>
+                <label class="location" for="radio2">continent2</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="3"  id="radio3">
+                <label  for="radio3" class="city_name">city3</label>
+                <label class="location" for="radio3">continent3</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="4" id="radio4">
+                <label  for="radio4" class="city_name">city4</label>
+                <label class="location" for="radio4">continent4</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="5"  id="radio5">
+                <label  for="radio5" class="city_name">city5</label>
+                <label class="location" for="radio5">continent5</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="6"  id="radio6">
+                <label  for="radio6" class="city_name">city6</label>
+                <label class="location" for="radio6">continent6</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="7"  id="radio7">
+                <label  for="radio7" class="city_name">city7</label>
+                <label class="location" for="radio7">continent7</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="8"  id="radio8">
+                <label  for="radio8" class="city_name">city8</label>
+                <label class="location" for="radio8">continent8</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="9"  id="radio9">
+                <label  for="radio9" class="city_name">city9</label>
+                <label class="location" for="radio9">continent9</label>
+              </div>
+
+              <div class="bar">
+                <input type="radio" name="city" value="10"  id="radio10">
+                <label  for="radio10" class="city_name">city10</label>
+                <label class="location" for="radio10">continent10</label>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <div class="city_pic">
+          <span class="hide_pic"></span>
+          <img src="./image/city_1.png" id="city_img">
+        </div>
+        <div class="introduction">
+          <h2 id="title">New York</h2>
+          <p id="para">
+            New York, also known as the Big Apple, is a city which offers infinite things to do and places to see.
+          </p>
+          <div class="looking_view">
+            <a href="./newYork.html" id="link">
+              <h3>
+                Looking View
+              </h3>
+              <img src="./image/building.png">
+            </a>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="inside_bar">
+      <div class="social">
+        <a href="#">
+          <div class="fb"></div>
+        </a>
+        <a href="#">
+          <div class="ig"></div>
+        </a>
+        <a href="#">
+          <div class="tt"></div>
+        </a>
+      </div>
+      <div class="company">
+        <img src="./image/footer_left_arrow.png">
+        <span class="footer_text">
+          STREET VIEW.INC
+        </span>
+        <img src="./image/footer_right_arrow.png">
+      </div>
+      <div class="contact">
+
+          <span class="footer_text">
+            <a href="./contact.html">
+              Contact
+            </a>
+          </span>
+
+        <a href="./contact.html">
+          <img src="./image/contact.png">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="./js/scroller/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="./js/heightbug.js"></script>
+  <script src="./js/header.js" type="module"></script>
+  <script src="./js/area.js" type="module"></script>
+</body>
+</html>
