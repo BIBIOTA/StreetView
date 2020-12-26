@@ -146,8 +146,8 @@ document.addEventListener("click", function(e){
 
 // error message
 var username_div = document.getElementById('username_div');
-var usernameErr = `<div class="err"><p>if(input.value == null){return false}else{Are you Sexfat ?}</p></div>`;
-var nullnull = `<div class="err p2err null"><p>if(input.value == null){return false}else{Are you Sexfat ?}</p></div>`;
+var usernameErr = `<div class="err"><p>Username can't null !</p></div>`;
+var nullnull = `<div class="err p2err null"><p>Password can't null !</p></div>`;
 var passwordErr = `<div class="err p2err passerr"><p>Password at least 6 characters</p></div>`;
 var passwordMatch = `<div class="err p2err match"><p>Passwords must match</p></div>`;
 var emailMatch = `<div class="err p2err match"><p>Email address must match</p></div>`;
